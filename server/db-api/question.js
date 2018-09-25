@@ -33,11 +33,11 @@ const create = (q) => {
   return question.save()
 }
 
-const createAnswer = (q, a) => {
+const createAnswer = async (q, a) => {
   const answer = new Answer(a)
-  const savedAnswer = answer.save()
+  const savedAnswer = await answer.save()
   q.answers.push(savedAnswer)
-  q.save()
+  await q.save()
   return savedAnswer
 }
 

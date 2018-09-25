@@ -4,15 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start-prod": "cross-env NODE_ENV=production node server.js",
     "start:dev": "cross-env NODE_ENV=development cross-env DEBUG=platzi-overflow* nodemon ./server/index.js --exec babel-node",
-    "clean": "rm -rf build && mkdir build",
-    "build-babel": "babel -d ./build ./server -s",
-    "build": "npm run clean && npm run build-babel",
-    "start": "npm run build && node ./build/index.js"
+    "build": "babel server --out-dir dist/server",
+    "postinstall": "npm run build"
   },
   "author": "mauricioh_cabrera@hotmail.com",
   "license": "MIT",
   "dependencies": {
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-preset-stage-0": "^6.24.1",
     "cross-env": "^5.2.0"
   }
 }

@@ -1,11 +1,11 @@
 import Debug from 'debug'
 import app from './app'
 import mongoose from 'mongoose'
-import { mongoUrl } from './config'
+import { mongoUrl, PORT } from './config'
 
-
-const PORT = 5000
 const debug = new Debug('platzi-overflow:root')
+
+mongoose.Promise = global.Promise
 
 const start = async () => {
   await mongoose.connect(mongoUrl, {

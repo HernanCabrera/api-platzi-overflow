@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../server/routes/index.js"],"names":["default"],"mappings":";;;;;;;;;;;6CAASA,O;;;;;;;;;yCACAA,O","file":"index.js","sourcesContent":["export { default as question } from './question'\r\nexport { default as auth } from './auth'\r\n\r\n"]}

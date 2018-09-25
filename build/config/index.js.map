@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../server/config/index.js"],"names":["secret","mongoUrl"],"mappings":";;;;;AAAA,IAAMA,SAAS,gBAAf;;AAEA,IAAMC,WAAW,qCAAjB;;QAGED,M,GAAAA,M;QACAC,Q,GAAAA,Q","file":"index.js","sourcesContent":["const secret = 'miclavesecreta'\r\n\r\nconst mongoUrl = 'mongodb://localhost/platzi-overflow'\r\n\r\nexport {\r\n  secret,\r\n  mongoUrl\r\n}"]}
