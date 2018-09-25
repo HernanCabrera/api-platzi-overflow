@@ -1,0 +1,30 @@
+{
+  "name": "platzi-overflow-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "cross-env NODE_ENV=development cross-env DEBUG=platzi-overflow* nodemon ./server/index.js --exec babel-node",
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build ./server -s",
+    "build": "npm run clean && npm run build-babel",
+    "start:prod": "npm run build && node ./build/index.js"
+  },
+  "author": "mauricioh_cabrera@hotmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "debug": "^4.0.1",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.2.17",
+    "mongoose-unique-validator": "^2.0.2",
+    "nodemon": "^1.18.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "cross-env": "^5.2.0"
+  }
+}

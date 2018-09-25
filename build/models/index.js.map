@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../server/models/index.js"],"names":["default"],"mappings":";;;;;;;;;;;yCAASA,O;;;;;;;;;2CACAA,O;;;;;;;;;6CACAA,O","file":"index.js","sourcesContent":["export { default as User } from './user'\r\nexport { default as Answer } from './answer'\r\nexport { default as Question } from './question'\r\n\r\n"]}
